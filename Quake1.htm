@@ -104,13 +104,17 @@
 
 			window.onload = function()
 				{
-				document.getElementById("container").contentDocument.location.replace("about:blank");
+				const container = document.getElementById("container");
+
+				container.contentDocument.location.replace("about:blank");
 
 				// TO KEEP FOCUS IN THE CONTAINER
 				setInterval(function()
 					{
-					document.getElementById("container").focus();
+						container.focus();
 					}, 250);
+
+				runQuake();
 				}
 		</script>
 
